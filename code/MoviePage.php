@@ -8,6 +8,7 @@
 
 class MoviePage extends Page
 {
+    private static $description = 'Displays movie information of available movies.';
 
     /**
      * @var array
