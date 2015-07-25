@@ -3,7 +3,7 @@
 This module extends the SilverStripe CMS with the ability to show detailed information of movies. As a source, the
 OpenMovie Database will be used to retrieve details of the movies.
 
-## Description
+## Overview
 
 This Module adds a new page type which can be used to show information about movies. As a CMS user, you will have the
 ability to search for existing movie titles from the open movie database website. The CMS will retrieve information
@@ -14,6 +14,8 @@ Once a movie title has been entered, a Ajax request will be send to the OMDBAPI 
 The Open Movie Database does not require an API key.
 
 ## Installation
+
+This module has been tested against SilverStripe 3.1.13 and requires the simple theme.
 
 ### Create a new project
 
@@ -32,7 +34,6 @@ Run a dev-build in the browser or via command line:
 
 Done.
 
-
 ### If you have an existing SilverStripe project
 
 Clone this repository from github into the root folder of your SilverStripe project
@@ -46,9 +47,31 @@ Run a dev-build in the browser or via command line:
 
 Done.
 
+### Add repository into your project composer.json file
+
+In case you already have a project and like to add this module via composer, open your project composer.json
+file in a browser and add the following elements to your file...
+
+#### Add the repository
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/fb3rasp/moviepages.git"
+        }
+    ],
+
+#### Require the module
+
+	"require": {
+		"php": ">=5.3.2",
+		[...]
+        "fb3rasp/moviepages": "*"
+	},
+
 ## Manual
 
-Log into the CMS and create a new page of the pagetype 'Movie Page'. After successfully creating the page type, you will
+Log into the CMS and create a new page of the page-type 'Movie Page'. After successfully creating the page type, you will
 find the CMS form with a number of new fields. The page itself does not hold any content anymore and shows only the movie
 information. For that reason the Content edit-field has been removed.
 
@@ -62,7 +85,9 @@ The user can search multiple times and everytime, when the user selects a record
 ### Searching for Movies
 
 Select the Search field in the 'Movies' section of the form and enter 'Star'. A request will be send and the top 10
-results will be returned and shown in a drop down.
+results will be returned and shown in a drop down. You need to enter at least three characters before the search-request
+will be send to the remote API.
+
 When you continue to enter the movie title, you will see that the result set shows more and more relevant movies.
 
 ### Saving Movie Page
@@ -86,6 +111,11 @@ If you like to use the module but need to change the template, simply create a l
 * Verify server side that the movie datafields have not been altered.
 * Abstract search API so that other movie databases are supported.
 * Adding Unit and Behaviour tests.
+
+## Quality
+
+* At the stage, no unit, function or behaviour tests have been created
+* Module has been mainly tested against Chrome and Firefox, IE10
 
 ## Bugtracker
 
