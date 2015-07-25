@@ -33,7 +33,20 @@ Run a dev-build in the browser (or using sake via command line):
 
 The new page type is now available and ready for use.
 
-### Option 2: If you have an existing SilverStripe project
+### Option 2: Require the module for an existin SilverStripe project
+
+Change directory into the project's root directory and run the composer require command:
+
+    cd [silverstripe-project]
+    composer require fb3rasp/moviepages
+    
+Run a dev-build in the browser (or using sake via command line):
+
+    http://localhost/[silverstripe-project]/dev/build
+
+The new page type is now available and ready for use.
+    
+### Option 3: If you have an existing SilverStripe project
 
 Clone this repository from github into the root folder of your SilverStripe project
 
@@ -46,7 +59,7 @@ Run a dev-build in the browser or via command line:
 
 The new page type is now available and ready for use.
 
-### Option 3: Add repository into your project composer.json file
+### Option 4: Add repository into your project composer.json file
 
 In case you already have a project, managed by composer, and you would like to add this module via composer, open your project composer.json file and add the following text segments to it...
 
