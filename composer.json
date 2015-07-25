@@ -1,10 +1,11 @@
 {
     "name": "fb3rasp/moviepages",
-    "description": "Enable silverstripe pages to show content from OpenMovie Database.",
+
+    "description": "Enables silverstripe pages to show content from OpenMovie Database.",
 
     "type": "silverstripe-module",
 
-    "homepage": "http://github.com/your-vendor-name/module-name",
+    "homepage": "https://github.com/fb3rasp/moviepages",
 
     "keywords": [
         "silverstripe",
@@ -22,7 +23,7 @@
     ],
 
     "support": {
-        "issues": "http://github.com/your-vendor-name/module-name/issues"
+        "issues": "https://github.com/fb3rasp/moviepages/issues"
     },
 
     "require": {
