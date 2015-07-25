@@ -1,0 +1,5 @@
+---
+Name: moviesearch
+---
+MovieAutoComplete:
+  suggestURL: 'http://www.omdbapi.com/'
