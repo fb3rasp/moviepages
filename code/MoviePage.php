@@ -54,37 +54,37 @@ class MoviePage extends Page
             'Root.Main',
             array(
                 HeaderField::create('Movies'),
-                MovieAutoComplete::create("SearchTerm","Search", "", 128)
-                    ->setAttribute('placeholder',"Please enter a movie name to search for...")
+                MovieAutoComplete::create("SearchTerm", "Search", "", 128)
+                    ->setAttribute('placeholder', "Please enter a movie name to search for...")
                     ->setDescription('After choosing a movie, the details will be used as a template to complete this form.'),
-                HeaderField::create('Movie Details','Movie Details',3),
-                TextField::create('MovieTitle','Movie Title',$this->Title),
+                HeaderField::create('Movie Details', 'Movie Details', 3),
+                TextField::create('MovieTitle', 'Movie Title', $this->Title),
                 FieldGroup::create(
                     array(
-                        TextField::create('Runtime','Runtime',$this->Runtime),
-                        TextField::create('Rated','Rated',$this->Rated)
+                        TextField::create('Runtime', 'Runtime', $this->Runtime),
+                        TextField::create('Rated', 'Rated', $this->Rated)
                     )
                 )->setTitle('Details'),
                 FieldGroup::create(
                     array(
-                        TextField::create('Country','Country',$this->Country),
-                        TextField::create('Released','Released',$this->Released),
-                        TextField::create('Year','Year',$this->Year)
+                        TextField::create('Country', 'Country', $this->Country),
+                        TextField::create('Released', 'Released', $this->Released),
+                        TextField::create('Year', 'Year', $this->Year)
 
                     )
                 )->setTitle('Release Info'),
-                TextField::create('Genre','Genre',$this->Genre),
-                TextareaField::create('Plot','Plot',$this->Plot),
-                HeaderField::create('People Involved','People Involved',3),
-                TextField::create('Director','Director',$this->Director),
-                TextField::create('Writer','Writer',$this->Writer),
-                TextField::create('Actors','Actors',$this->Actors),
-                HeaderField::create('Awards','Awards',3),
-                TextareaField::create('Awards','Awards',$this->Awards),
-                HiddenField::create('Type','Type',$this->Type),
-                HiddenField::create('ImdbID','ImdbID',$this->ImdbID),
-                HiddenField::create('ImdbRating','ImdbRating',$this->ImdbRating)
-            ),'Content'
+                TextField::create('Genre', 'Genre', $this->Genre),
+                TextareaField::create('Plot', 'Plot', $this->Plot),
+                HeaderField::create('People Involved', 'People Involved', 3),
+                TextField::create('Director', 'Director', $this->Director),
+                TextField::create('Writer', 'Writer', $this->Writer),
+                TextField::create('Actors', 'Actors', $this->Actors),
+                HeaderField::create('Awards', 'Awards', 3),
+                TextareaField::create('Awards', 'Awards', $this->Awards),
+                HiddenField::create('Type', 'Type', $this->Type),
+                HiddenField::create('ImdbID', 'ImdbID', $this->ImdbID),
+                HiddenField::create('ImdbRating', 'ImdbRating', $this->ImdbRating)
+            ), 'Content'
         );
 
         // Remove the content area (HTMLEditField)
@@ -109,7 +109,6 @@ class MoviePage extends Page
         }
         parent::onBeforeWrite();
     }
-
 }
 
 /**
@@ -121,11 +120,11 @@ class MoviePage extends Page
 class MoviePage_Controller extends Page_Controller
 {
 
-    private static $allowed_actions = array (
+    private static $allowed_actions = array(
     );
 
-    public function init() {
+    public function init()
+    {
         parent::init();
     }
-
 }

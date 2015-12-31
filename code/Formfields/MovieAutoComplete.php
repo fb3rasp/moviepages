@@ -31,7 +31,7 @@ class MovieAutoComplete extends TextField
     /**
      * @return array
      */
-    function getAttributes()
+    public function getAttributes()
     {
         return array_merge(
             parent::getAttributes(), array(
@@ -49,7 +49,7 @@ class MovieAutoComplete extends TextField
      *
      * @return string
      */
-    function Type()
+    public function Type()
     {
         return 'autocomplete text';
     }
@@ -61,7 +61,7 @@ class MovieAutoComplete extends TextField
      *
      * @return string
      */
-    function Field($properties = array())
+    public function Field($properties = array())
     {
         // jQuery Autocomplete Requirements
         Requirements::css(THIRDPARTY_DIR . '/jquery-ui-themes/smoothness/jquery-ui.css');
@@ -84,11 +84,11 @@ class MovieAutoComplete extends TextField
     {
         $suggestURL = $this->config()->suggestURL;
 
-        if(!empty($suggestURL)) {
+        if (!empty($suggestURL)) {
             return $suggestURL;
         }
 
         // Failover - Default link, in case config.yml is not configured correctly.
         return 'http://www.omdbapi.com/';
     }
-} 
+}
