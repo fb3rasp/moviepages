@@ -33,7 +33,7 @@ Run a dev-build in the browser (or using sake via command line):
 
 The new page type is now available and ready for use.
 
-### Option 2: Require the module for an existin SilverStripe project
+### Option 2: Require the module for an existing SilverStripe project
 
 Change directory into the project's root directory and run the composer require command:
 
